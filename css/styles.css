@@ -451,18 +451,19 @@ img{
 
   .texto-hero {
     position: static;
-    transform: none;
-    width: 100%;
-    padding: 1rem;
-    box-sizing: border-box;
+    width: 90%;
+    max-width: 90%;
+    margin: 0 auto;
+    padding: 0;
     text-align: center;
-    margin-top: 2rem auto 0 auto;
+    box-sizing: border-box;
+   
   }
 
   .texto-hero h1 {
     position: relative;
-    top: -20px;
-    width: 100%;
+    top: 5px;
+    width: auto;
     margin: 0 auto 0.5rem auto;
     font-size: 1.6rem;
     text-align: center;
@@ -470,8 +471,8 @@ img{
 
   .texto-hero p {
     position: relative;
-    width: 100%;
-    max-width: 100%;
+    width: auto;
+    max-width: 90%;
     margin: 0 auto;
     font-size: 1rem;
     text-align: center;
