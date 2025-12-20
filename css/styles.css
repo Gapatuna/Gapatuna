@@ -3,11 +3,11 @@
    ----------------------------------------------------------- */
 
    :root{
-    --bg: #0f1113;          /* fondo oscuro */
-    --surface: #16181a;     /* tarjetas / superficies */
-    --text: #e8eaec;        /* texto principal */
-     --muted: #9aa0a6;       /* texto secundario */
-    --accent: #7aa0c4;      /* color acento */
+    --bg: #0f1113;          
+    --surface: #16181a;     
+    --text: #e8eaec;        
+     --muted: #9aa0a6;       
+    --accent: #7aa0c4;      
     --max-width: 1200px;
     --radius: 10px;
     --gap-lg: 2rem;
