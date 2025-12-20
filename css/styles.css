@@ -459,15 +459,17 @@ img{
   }
 
   .texto-hero h1 {
-    position: static;
-    font-size: 1.6rem;
-    margin-bottom: 0.5rem;
+    position: relative;
+    top: -20px;
+    text-align: center;
   }
 
   .texto-hero p {
-    position: static;
-    font-size: 1rem;
-    max-width: 100%;
+    background-color: rgba(255,255,255,0.7);
+    padding: 0.2em 0.5em;
+    display: inline-block;
+    border-radius: 4px;
+    color: rgb(36, 35, 35);
   }
 
 }
