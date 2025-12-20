@@ -452,19 +452,29 @@ img{
   .texto-hero {
     position: static;
     transform: none;
-    max-width: 100%;
+    width: 100%;
     padding: 1rem;
+    box-sizing: border-box;
     text-align: center;
-    margin-top: 2rem;
+    margin-top: 2rem auto 0 auto;
   }
 
   .texto-hero h1 {
     position: relative;
     top: -20px;
+    width: 100%;
+    margin: 0 auto 0.5rem auto;
+    font-size: 1.6rem;
     text-align: center;
   }
 
   .texto-hero p {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    font-size: 1rem;
+    text-align: center;
     background-color: rgba(255,255,255,0.7);
     padding: 0.2em 0.5em;
     display: inline-block;
