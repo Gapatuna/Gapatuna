@@ -1,0 +1,473 @@
+/* -----------------------------------------------------------
+    VARIABLES GLOBALES
+   ----------------------------------------------------------- */
+
+   :root{
+    --bg: #0f1113;          /* fondo oscuro */
+    --surface: #16181a;     /* tarjetas / superficies */
+    --text: #e8eaec;        /* texto principal */
+     --muted: #9aa0a6;       /* texto secundario */
+    --accent: #7aa0c4;      /* color acento */
+    --max-width: 1200px;
+    --radius: 10px;
+    --gap-lg: 2rem;
+    --gap-md: 1.25rem; 
+}
+
+/*  RESET Y BASE (box model) */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+    
+
+}
+
+img{
+    max-width: 100%;
+    display: block;
+    height: auto;
+}
+
+/* contenedores reutilizables */
+
+.contenedor, .contenedor-header, .contenedor-hero, .contenedor_footer {
+    width: 90%;
+    max-width: var(--max-width);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* HEADER */
+
+.header-site{
+    background: rgba(22,24,26,0.95);
+    border-bottom: 1px solid rgba(255,255,255,0.03);
+    
+}
+
+.contenedor-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 0;
+    
+}
+
+.logo-link{
+    display: inline-block;
+}
+
+.logo{
+    width: 200px;
+    height: auto;
+    display: block;
+}
+
+.navbar-toggler {
+    border: none; /* quita borde */
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255,1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+.nav-link {
+    color: var(--text) !important; /* color de texto blanco */
+    font-weight: 600;
+}
+
+.nav-link:hover {
+    color: var(--accent) !important;
+}
+#navbarGapatuna.collapse.show .navbar-nav {
+    flex-direction: row !important;         
+    width: 100%;
+    align-items: center;
+}
+
+#navbarGapatuna.collapse.show .nav-item {
+    margin: 0 15px; /* espacio entre enlaces */
+}
+/* HERO */
+
+.hero{
+    height: 60vh;
+    background-image: url(../imagenes/index/hero-background.png);
+    background-size: cover;
+    background-position: 20% 48%;
+    display: flex;
+    align-items: center;
+    padding: 2rem 0;
+
+}
+
+
+.contenedor-hero{
+    position: relative;
+    width: 90%;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    display: block;
+    padding: 0;
+    height: 100%;
+
+}
+
+.texto-hero {
+    position: absolute;
+    right: 8%;
+    top: 87%;
+    transform: translateY(-50%);
+    max-width: 520px;    
+    background: none;
+    color: var(--bg);
+        
+}
+
+.texto-hero h1{
+    position: relative;
+    left: 138px;
+    top: 1px;       
+    font-family: serif;
+    font-size: 2.8rem;
+    color: rgb(36, 35, 35);
+    margin-bottom: 0.4rem;
+}
+
+.texto-hero p {
+    position: relative;
+    left: 100px;
+    top: -15px;
+    max-width: 500px;
+    font-size: 1.1rem;
+}
+
+.text-primeraletra::first-letter{
+    font-size: 4rem;
+    color: rgb(150, 75, 150);
+    
+}
+
+
+.lead{
+    color: var(--bg);
+    font-size: 1.05rem;
+}
+
+/* CARDS DEL INDEX */
+
+.contenedor-cards{
+    padding: 1rem 3rem;
+}
+
+
+.grid-cards{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--gap-lg);
+    width: 90%;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 10px;
+}
+
+
+.card{
+    background: var(--surface);
+    padding: 1rem;
+    border-radius: var(--radius);
+    text-align: left;
+    border: 1px solid rgba(255,255,255,0.02);
+}
+
+.card figure{
+    margin-bottom: 0.75rem;
+}
+
+.card h3{
+    font-family: serif;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    color: var(--text);
+
+}
+
+.card p{
+    color: var(--muted);
+    font-size: 0.95rem;
+    margin-bottom: 0.75rem;
+}
+
+.card a{
+    color: var(--accent);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+/* PÁGINAS INTERNAS */
+
+.contenedor{
+    padding: 2.5rem 0;
+    
+}
+
+.works{
+    width: 90%;
+    max-width: var(--max-width);
+    margin: 0 auto;
+}
+
+.titulo_seccion{
+    font-family: serif;
+    font-size: 2rem;
+    margin-bottom: 0.6rem;
+    color: var(--text);
+}
+
+.intro{
+    color: var(--muted);
+    margin-bottom: 1.5rem;
+}
+
+/* GALERÍAS */
+
+.grid_galeria_tattoos, .grid_galeria_obras, .grid_galeria_ceramica {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--gap-md);
+    margin-bottom: 1rem;
+}
+
+.grid_galeria_tattoos figure, .grid_galeria_obras figure, .grid_galeria_ceramica figure {
+    background: rgba(255,255,255,0.02);
+    padding: 0.6rem;
+    border-radius: 8px;
+}
+
+.grid_galeria_tattoos img, .grid_galeria_obras img, .grid_galeria_ceramica img{
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.grid_galeria_tattoos figcaption, .grid_galeria_obras figcaption, .grid_galeria_ceramica figcaption {
+    color: var(--muted);
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+}
+
+/* CONTACTO */
+
+.form-contacto{
+    width: 90%;
+    max-width: 700px;
+    margin: 1.5rem auto 3rem auto;
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-md);
+    padding: 1rem;
+    background: var(--surface);
+    border-radius: 8px;
+    border: 1px solid rgba(255,255,255,0.02);
+}
+
+.form-contacto label{
+    color: var(--muted);
+    font-size: 0.95rem;
+
+}
+
+.form-contacto input, .form-contacto textarea{
+    padding: 0.7rem;
+    border-radius: 6px;
+    border: 1px solid rgba(255,255,255,0.03);
+    background: rgba(0,0,0,0.15);
+    color: var(--text);
+    font-size: 1rem;
+
+}
+
+.form-contacto select{
+    padding: 0.7rem;
+    border-radius: 6px;
+    border: 1px solid rgba(255,255,255,0.03);
+    background: #ffffff;
+    color: #000000;
+    font-size: 1rem;
+}
+
+
+/* BOTÓN */
+
+.boton{
+    background: var(--accent);
+    color: var(--bg);
+    padding: 0.8rem 1rem;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+
+
+/* FOOTER */
+
+.footer{
+    padding: 20px 30px;
+    margin-top: 3rem;
+    padding: 2rem 0;
+    background: rgb(22,24,26,0.95);
+    color: var(--muted);
+}
+
+.contenedor_footer{
+    width: 90%;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    text-align: center;
+    font-size: 0.95rem;
+
+}
+
+/* BOTON WHATSAPP */
+
+.wpp-fixed{
+    position: fixed;
+    bottom: 10px;
+    right: 25px;
+    width: 55px;
+    height: 55px;
+    background-color: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.35);
+    z-index: 1000 ;
+    text-decoration: none;
+}
+
+.wpp-fixed img{
+    width: 28px;
+    height: 28px;
+}
+
+/* LIGHTBOX */
+
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.8);
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+    border: 2px solid #fff;
+}
+
+.lightbox:target {
+    display: flex;
+}
+
+.lightbox .cerrar {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 2rem;
+    color: white;
+    text-decoration: none;
+}
+
+
+/* MODAL */
+
+.modal-consulta .modal-content {
+    background-color: #ffffff;
+    color:#000000;
+
+}
+
+
+
+.modal-consulta .modal-header{
+    border-bottom: 1px solid #ddd;
+}
+
+.modal-consulta .modal-footer {
+    border-top: 1px solid #ddd;
+}
+/* RESPONSIVE */
+
+@media (max-width: 600px) {
+  .grid-cards,
+  .grid_galeria_tattoos,
+  .grid_galeria_obras,
+  .grid_galeria_ceramica {
+    grid-template-columns: 1fr;
+  }
+
+  .contenedor-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.6rem;
+    padding: 0.8rem 0;
+  }
+
+  .main-nav ul {
+    flex-direction: column;
+    gap: 0.6rem;
+    width: 100%;
+  }
+
+  .logo {
+    width: 100px;
+  }
+
+  .hero {
+    height: 50vh;
+    padding: 1rem 0;
+    background-position: center top;
+  }
+
+  .texto-hero {
+    position: static;
+    transform: none;
+    max-width: 100%;
+    padding: 1rem;
+    text-align: center;
+    margin-top: 2rem;
+  }
+
+  .texto-hero h1 {
+    position: static;
+    font-size: 1.6rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .texto-hero p {
+    position: static;
+    font-size: 1rem;
+    max-width: 100%;
+  }
+
+}
