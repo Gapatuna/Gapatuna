@@ -69,28 +69,40 @@ img{
 }
 
 /* NAVBAR PERSONALIZADA */
+.navbar {
+    background-color: rgba(22,24,26,0.95); /* asegúrate que el fondo sea oscuro */
+    z-index: 10;
+}
 .nav-gapatuna {
     display: flex;
     align-items: center;
     justify-content: flex-end;
+
 }
 
 .nav-gapatuna-toggler {
     border: none;
 }
 
+.nav-gapatuna-link,
+.nav-gapatuna-link:hover,
+.nav-gapatuna-link:focus,
+.nav-gapatuna-link:active,
+.nav-gapatuna-link:visited {
+    color: #ffffff !important;
+}
 .nav-gapatuna-toggler-icon {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255,1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }
 
 .nav-gapatuna-link {
-    color: var(--text);
+    color: #ffffff !important;
     font-weight: 600;
     text-decoration: none;
 }
 
 .nav-gapatuna-link:hover {
-    color: var(--accent);
+    color: var(--accent) !important;
 }
 
 .nav-gapatuna-menu {
@@ -100,6 +112,8 @@ img{
     align-items: center;
     gap: 15px;
 }
+
+
 
 /* HERO */
 
