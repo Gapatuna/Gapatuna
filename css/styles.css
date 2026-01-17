@@ -2,11 +2,11 @@
     VARIABLES GLOBALES
    ----------------------------------------------------------- */
 
-   :root{
+:root{
     --bg: #0f1113;          
     --surface: #16181a;     
     --text: #e8eaec;        
-     --muted: #9aa0a6;       
+    --muted: #9aa0a6;       
     --accent: #7aa0c4;      
     --max-width: 1200px;
     --radius: 10px;
@@ -27,8 +27,6 @@ body{
     color: var(--text);
     font-family: Arial, Helvetica, sans-serif;
     line-height: 1.5;
-    
-
 }
 
 img{
@@ -46,13 +44,11 @@ img{
     margin-right: auto;
 }
 
-
 /* HEADER */
 
 .header-site{
     background: rgba(22,24,26,0.95);
     border-bottom: 1px solid rgba(255,255,255,0.03);
-    
 }
 
 .contenedor-header{
@@ -60,7 +56,6 @@ img{
     align-items: center;
     justify-content: space-between;
     padding: 1rem 0;
-    
 }
 
 .logo-link{
@@ -73,31 +68,39 @@ img{
     display: block;
 }
 
-.navbar-toggler {
-    border: none; /* quita borde */
+/* NAVBAR PERSONALIZADA */
+.nav-gapatuna {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
 }
 
-.navbar-toggler-icon {
+.nav-gapatuna-toggler {
+    border: none;
+}
+
+.nav-gapatuna-toggler-icon {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255,1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }
 
-.nav-link {
-    color: var(--text) !important; /* color de texto blanco */
+.nav-gapatuna-link {
+    color: var(--text);
     font-weight: 600;
+    text-decoration: none;
 }
 
-.nav-link:hover {
-    color: var(--accent) !important;
+.nav-gapatuna-link:hover {
+    color: var(--accent);
 }
-#navbarGapatuna.collapse.show .navbar-nav {
-    flex-direction: row !important;         
+
+.nav-gapatuna-menu {
+    display: flex;
+    flex-direction: row;
     width: 100%;
     align-items: center;
+    gap: 15px;
 }
 
-#navbarGapatuna.collapse.show .nav-item {
-    margin: 0 15px; /* espacio entre enlaces */
-}
 /* HERO */
 
 .hero{
@@ -108,9 +111,7 @@ img{
     display: flex;
     align-items: center;
     padding: 2rem 0;
-
 }
-
 
 .contenedor-hero{
     position: relative;
@@ -120,7 +121,6 @@ img{
     display: block;
     padding: 0;
     height: 100%;
-
 }
 
 .texto-hero {
@@ -131,7 +131,6 @@ img{
     max-width: 520px;    
     background: none;
     color: var(--bg);
-        
 }
 
 .texto-hero h1{
@@ -155,9 +154,7 @@ img{
 .text-primeraletra::first-letter{
     font-size: 4rem;
     color: rgb(150, 75, 150);
-    
 }
-
 
 .lead{
     color: var(--bg);
@@ -170,7 +167,6 @@ img{
     padding: 1rem 3rem;
 }
 
-
 .grid-cards{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -180,7 +176,6 @@ img{
     margin: 0 auto;
     padding: 10px;
 }
-
 
 .card{
     background: var(--surface);
@@ -199,7 +194,6 @@ img{
     font-size: 1.1rem;
     margin-bottom: 0.5rem;
     color: var(--text);
-
 }
 
 .card p{
@@ -218,7 +212,6 @@ img{
 
 .contenedor{
     padding: 2.5rem 0;
-    
 }
 
 .works{
@@ -264,7 +257,6 @@ img{
 .grid_galeria_tattoos figcaption, .grid_galeria_obras figcaption, .grid_galeria_ceramica figcaption {
     color: var(--muted);
     font-size: 0.9rem;
-    margin-top: 0.5rem;
 }
 
 /* CONTACTO */
@@ -285,7 +277,6 @@ img{
 .form-contacto label{
     color: var(--muted);
     font-size: 0.95rem;
-
 }
 
 .form-contacto input, .form-contacto textarea{
@@ -295,7 +286,6 @@ img{
     background: rgba(0,0,0,0.15);
     color: var(--text);
     font-size: 1rem;
-
 }
 
 .form-contacto select{
@@ -307,10 +297,8 @@ img{
     font-size: 1rem;
 }
 
-
-/* BOTÓN */
-
-.boton{
+/* BOTÓN PERSONALIZADO */
+.btn-gapatuna{
     background: var(--accent);
     color: var(--bg);
     padding: 0.8rem 1rem;
@@ -319,8 +307,6 @@ img{
     cursor: pointer;
     font-weight: 700;
 }
-
-
 
 /* FOOTER */
 
@@ -338,7 +324,6 @@ img{
     margin: 0 auto;
     text-align: center;
     font-size: 0.95rem;
-
 }
 
 /* BOTON WHATSAPP */
@@ -398,16 +383,11 @@ img{
     text-decoration: none;
 }
 
-
-/* MODAL */
-
+/* MODAL PERSONALIZADO */
 .modal-consulta .modal-content {
     background-color: #ffffff;
     color:#000000;
-
 }
-
-
 
 .modal-consulta .modal-header{
     border-bottom: 1px solid #ddd;
@@ -416,6 +396,7 @@ img{
 .modal-consulta .modal-footer {
     border-top: 1px solid #ddd;
 }
+
 /* RESPONSIVE */
 
 @media (max-width: 600px) {
@@ -444,43 +425,25 @@ img{
   }
 
   .hero {
-    height: 50vh;
-    padding: 1rem 0;
-    background-position: center top;
-  }
+  height: auto;
+  padding-bottom: 0;
+}
 
-  .texto-hero {
-    position: static;
-    width: 90%;
-    max-width: 90%;
-    margin: 0 auto;
-    padding: 0;
-    text-align: center;
-    box-sizing: border-box;
-   
-  }
+.texto-hero {
+  position: static !important;
+  transform: none !important;
+  text-align: center;
+  margin: 1rem 0;
+  background: none;
+}
 
-  .texto-hero h1 {
-    position: relative;
-    top: 5px;
-    width: auto;
-    margin: 0 auto 0.5rem auto;
-    font-size: 1.6rem;
-    text-align: center;
-  }
-
-  .texto-hero p {
-    position: relative;
-    width: auto;
-    max-width: 90%;
-    margin: 0 auto;
-    font-size: 1rem;
-    text-align: center;
-    background-color: rgba(255,255,255,0.7);
-    padding: 0.2em 0.5em;
-    display: inline-block;
-    border-radius: 4px;
-    color: rgb(36, 35, 35);
-  }
-
+.texto-hero h1,
+.texto-hero p {
+  position: static !important;
+  left: auto !important;
+  top: auto !important;
+  background: none;
+  padding: 0;
+  margin: 0.3rem auto;
+}
 }
