@@ -477,7 +477,6 @@ img{
     color: rgb(36, 35, 35); 
     display: inline-block; 
     border-radius: 4px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
     text-shadow: 4px 4px 4px white !important;
   }
 }
