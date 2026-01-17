@@ -139,7 +139,7 @@ img{
 
 .texto-hero {
     position: absolute;
-    right: 8%;
+    right: 20%;
     top: 87%;
     transform: translateY(-50%);
     max-width: 520px;    
@@ -159,7 +159,7 @@ img{
 
 .texto-hero p {
     position: relative;
-    left: 100px;
+    left: 200px;
     top: -15px;
     max-width: 500px;
     font-size: 1.1rem;
