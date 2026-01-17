@@ -460,7 +460,7 @@ img{
     margin: 0.5rem auto 0 auto; 
     font-size: 2rem; 
     text-align: center;
-    text-shadow: 2px 2px 4px white
+    text-shadow: 4px 4px 4px white
     
   }
 
@@ -471,7 +471,7 @@ img{
     background: #d8dadd;
     padding: 0.2em 0.5em;
     margin: 0.3rem auto 0 auto;
-    font-size: 1rem; 
+    font-size: 16px; 
     text-align: center;
     font-weight: bold;    
     color: rgb(36, 35, 35); 
