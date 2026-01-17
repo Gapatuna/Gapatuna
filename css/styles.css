@@ -398,7 +398,6 @@ img{
 }
 
 /* RESPONSIVE */
-
 @media (max-width: 600px) {
   .grid-cards,
   .grid_galeria_tattoos,
@@ -424,26 +423,42 @@ img{
     width: 100px;
   }
 
+  /* HERO  */
   .hero {
-  height: auto;
-  padding-bottom: 0;
-}
+    height: auto;
+    padding-bottom: 0;
+  }
 
-.texto-hero {
-  position: static !important;
-  transform: none !important;
-  text-align: center;
-  margin: 1rem 0;
-  background: none;
-}
+  .texto-hero {
+    position: static !important;
+    transform: none !important;
+    text-align: center;
+    margin: 1.5rem 0 0 0; 
+    background: none;
+  }
 
-.texto-hero h1,
-.texto-hero p {
-  position: static !important;
-  left: auto !important;
-  top: auto !important;
-  background: none;
-  padding: 0;
-  margin: 0.3rem auto;
-}
+  .texto-hero h1 {
+    position: static !important;
+    left: auto !important;
+    top: auto !important;
+    background: none;
+    padding: 0;
+    margin: 0.5rem auto 0 auto; 
+    font-size: 2rem; 
+    text-align: center;
+  }
+
+  .texto-hero p {
+    position: static !important;
+    left: auto !important;
+    top: auto !important;
+    background: none;
+    padding: 0.2em 0.5em;
+    margin: 0.3rem auto 0 auto;
+    font-size: 1rem; 
+    text-align: center;
+    color: rgb(36, 35, 35); 
+    display: inline-block; 
+    border-radius: 4px;
+  }
 }
