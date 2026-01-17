@@ -468,7 +468,7 @@ img{
     position: static !important;
     left: auto !important;
     top: auto !important;
-    background: #d8dadd;
+    background: none;
     padding: 0.2em 0.5em;
     margin: 0.3rem auto 0 auto;
     font-size: 16px; 
@@ -478,5 +478,6 @@ img{
     display: inline-block; 
     border-radius: 4px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+    text-shadow: 4px 4px 4px white !important;
   }
 }
