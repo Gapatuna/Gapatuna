@@ -1,0 +1,8 @@
+@use "../utilities/variables" as *;
+@use "../utilities/mixins" as *;
+
+/* contenedores reutilizables */
+
+.contenedor, .contenedor-header, .contenedor-hero, .contenedor_footer {
+    @include contenedor;
+}

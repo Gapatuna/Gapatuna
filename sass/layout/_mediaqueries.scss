@@ -1,0 +1,85 @@
+@use "../utilities/mixins" as *;
+@include mobile {
+
+/* RESPONSIVE */
+ 
+ 
+/* CARDS */
+
+    .grid-cards {
+        grid-template-columns: 1fr;
+    }
+
+
+/* GALERIA */
+
+    .grid_galeria_tattoos,
+    .grid_galeria_obras,
+    .grid_galeria_ceramica {
+      grid-template-columns: 1fr;
+    }
+
+
+/* HEADER / NAV */
+
+    .contenedor-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.6rem;
+    padding: 0.8rem 0;
+    }
+
+    .main-nav ul {
+    flex-direction: column;
+    gap: 0.6rem;
+    width: 100%;
+    }
+
+    .logo {
+    width: 100px;
+    }
+
+/* HERO  */
+    .hero {
+    height: auto;
+    padding-bottom: 0;
+    }
+
+    .texto-hero {
+    position: static !important;
+    transform: none !important;
+    text-align: center;
+    margin: 1.5rem 0 0 0; 
+    background: none;
+    }
+
+    .texto-hero h1 {
+    position: static !important;
+    left: auto !important;
+    top: auto !important;
+    background: none;
+    padding: 0;
+    margin: 0.5rem auto 0 auto; 
+    font-size: 2rem; 
+    text-align: center;
+    text-shadow: 4px 4px 4px white !important;
+    
+    }
+
+    .texto-hero p {
+    position: static !important;
+    left: auto !important;
+    top: auto !important;
+    background: none;
+    padding: 0.2em 0.5em;
+    margin: 0.3rem auto 0 auto;
+    font-size: 16px; 
+    text-align: center;
+    font-weight: bold !important;    
+    color: rgb(36, 35, 35); 
+    display: inline-block; 
+    border-radius: 4px;
+    text-shadow: 4px 4px 4px white !important;
+    }
+
+}

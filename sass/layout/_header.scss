@@ -1,0 +1,15 @@
+@use "../utilities/variables" as *;
+
+/* HEADER */
+
+.header-site{
+    background: $color-bg-2;
+    border-bottom: 1px solid $color-border;
+}
+
+.contenedor-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 0;
+}

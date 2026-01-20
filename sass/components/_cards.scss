@@ -1,0 +1,56 @@
+@use "../utilities/variables" as *;
+@use "../utilities/mixins" as *;
+
+/* CARDS DEL INDEX */
+
+.contenedor-cards{
+    padding: 1rem 3rem;
+}
+
+.grid-cards{
+    @include grid-3($gap-grande);
+    width: 90%;
+    max-width: $max-width;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.card{
+    background: $color-surface;
+    padding: 1rem;
+    border-radius: $border-radius;
+    text-align: left;
+    border: 1px solid $color-border;
+    transition: transform 0.4s ease;
+    
+}
+
+.card:hover{
+    transform: scale(1.05);
+}
+
+
+.card figure{
+    margin-bottom: 0.75rem;
+}
+
+.card h3{
+    font-family: serif;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    color: $color-texto;
+}
+
+.card p{
+    color: $color-muted;
+    font-size: 0.95rem;
+    margin-bottom: 0.75rem;
+}
+
+.card a{
+    color: $color-acento;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+

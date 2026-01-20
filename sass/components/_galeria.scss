@@ -1,0 +1,31 @@
+@use "../utilities/variables" as *;
+@use "../utilities/mixins" as *;
+
+
+/* GALERÍAS */
+
+.grid_galeria_tattoos, .grid_galeria_obras, .grid_galeria_ceramica {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: $gap-medio;
+    margin-bottom: 1rem;
+}
+
+.grid_galeria_tattoos figure, .grid_galeria_obras figure, .grid_galeria_ceramica figure {
+    background: rgba(255,255,255,0.02);
+    padding: 0.6rem;
+    border-radius: 8px;
+}
+
+.grid_galeria_tattoos img, .grid_galeria_obras img, .grid_galeria_ceramica img{
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.grid_galeria_tattoos figcaption, .grid_galeria_obras figcaption, .grid_galeria_ceramica figcaption {
+    color: $color-muted;
+    font-size: 0.9rem;
+}
+

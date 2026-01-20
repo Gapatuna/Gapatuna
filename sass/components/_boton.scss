@@ -1,0 +1,14 @@
+@use "../utilities/variables" as *;
+
+
+/* BOTÓN PERSONALIZADO */
+.btn-gapatuna{
+    background: $color-acento;
+    color: $color-bg;
+    padding: 0.8rem 1rem;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    font-weight: 700;
+}
+

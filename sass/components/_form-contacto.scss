@@ -1,0 +1,52 @@
+@use "../utilities/variables" as *;
+
+/* CONTACTO */
+
+.form-contacto{
+    width: 90%;
+    max-width: 700px;
+    margin: 1.5rem auto 3rem auto;
+    display: flex;
+    flex-direction: column;
+    gap: $gap-medio;
+    padding: 1rem;
+    background: $color-surface;
+    border-radius: 8px;
+    border: 1px solid $color-border;
+}
+
+.form-contacto label{
+    color: $color-muted;
+    font-size: 0.95rem;
+}
+
+.form-contacto fieldset label{
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.form-contacto fieldset label:hover{
+    color: $color-acento;
+}
+
+.form-contacto fieldset input {
+    accent-color: $color-acento;
+}
+
+.form-contacto input, .form-contacto textarea{
+    padding: 0.7rem;
+    border-radius: 6px;
+    border: 1px solid $color-border;
+    background: rgba(0,0,0,0.15);
+    color: $color-texto;
+    font-size: 1rem;
+}
+
+.form-contacto select{
+    padding: 0.7rem;
+    border-radius: 6px;
+    border: 1px solid $color-border;
+    background: #ffffff;
+    color: #000000;
+    font-size: 1rem;
+}

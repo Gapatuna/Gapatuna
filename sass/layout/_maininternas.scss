@@ -1,0 +1,26 @@
+@use "../utilities/variables" as *;
+
+
+/* PÁGINAS INTERNAS */
+
+.contenedor{
+    padding: 2.5rem 0;
+}
+
+.works{
+    width: 90%;
+    max-width: $max-width;
+    margin: 0 auto;
+}
+
+.titulo_seccion{
+    font-family: serif;
+    font-size: 2rem;
+    margin-bottom: 0.6rem;
+    color: $color-texto;
+}
+
+.intro{
+    color: $color-muted;
+    margin-bottom: 1.5rem;
+}

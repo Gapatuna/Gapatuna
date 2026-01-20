@@ -1,0 +1,49 @@
+@use "../utilities/variables" as *;
+
+/* NAVBAR */
+.navbar {
+    background-color:$color-bg-2;
+    z-index: 10;
+}
+.nav-gapatuna {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+}
+
+.nav-gapatuna-toggler {
+    border: none;
+}
+
+.nav-gapatuna-link,
+.nav-gapatuna-link:hover,
+.nav-gapatuna-link:focus,
+.nav-gapatuna-link:active,
+.nav-gapatuna-link:visited {
+    color: #ffffff !important;
+}
+.nav-gapatuna-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255,0.95)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+.nav-gapatuna-link {
+    color: #ffffff !important;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-gapatuna-link:hover {
+    color: $color-acento !important;
+    transform: translateY(-2px);
+}
+
+.nav-gapatuna-menu {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    gap: 15px;
+}
+

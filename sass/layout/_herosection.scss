@@ -1,0 +1,70 @@
+@use "../utilities/variables" as *;
+
+/* HERO */
+
+.hero{
+    height: 60vh;
+    background-image: url(../imagenes/index/hero-background.png);
+    background-size: cover;
+    background-position: 20% 48%;
+    display: flex;
+    align-items: center;
+    padding: 2rem 0;
+
+    opacity: 0;
+    animation: herofade 1.5s ease-out forwards;
+}
+
+@keyframes herofade{
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+
+.contenedor-hero{
+    position: relative;
+    width: 90%;
+    max-width: $max-width;
+    margin: 0 auto;
+    display: block;
+    padding: 0;
+    height: 100%;
+}
+
+.texto-hero {
+    position: absolute;
+    right: 20%;
+    top: 87%;
+    transform: translateY(-50%);
+    max-width: 520px;    
+    background: none;
+    color: $color-bg;
+}
+
+.texto-hero h1{
+    position: relative;
+    left: 138px;
+    top: 1px;       
+    font-family: serif;
+    font-size: 2.8rem;
+    color: rgb(36, 35, 35);
+    margin-bottom: 0.4rem;
+}
+
+.texto-hero p {
+    position: relative;
+    left: 200px;
+    top: -15px;
+    max-width: 500px;
+    font-size: 1.1rem;
+}
+
+.text-primeraletra::first-letter{
+    font-size: 4rem;
+    color: rgb(150, 75, 150);
+}
+
+.lead{
+    color: $color-bg;
+    font-size: 1.05rem;
+}

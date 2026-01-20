@@ -1,0 +1,19 @@
+@use "../utilities/variables" as *;
+
+/* FOOTER */
+
+.footer{
+    padding: 20px 30px;
+    margin-top: 3rem;
+    padding: 2rem 0;
+    background: $color-bg-2;
+    color: $color-muted;
+}
+
+.contenedor_footer{
+    width: 90%;
+    max-width: $max-width;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 0.95rem;
+}

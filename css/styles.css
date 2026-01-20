@@ -1,87 +1,60 @@
+@charset "UTF-8";
+/* UTILITIES */
 /* -----------------------------------------------------------
-    VARIABLES GLOBALES
+    VARIABLES 
    ----------------------------------------------------------- */
-
-:root{
-    --bg: #0f1113;          
-    --surface: #16181a;     
-    --text: #e8eaec;        
-    --muted: #9aa0a6;       
-    --accent: #7aa0c4;      
-    --max-width: 1200px;
-    --radius: 10px;
-    --gap-lg: 2rem;
-    --gap-md: 1.25rem; 
-}
-
+/* BASE */
+/* UTILITIES */
 /*  RESET Y BASE (box model) */
-
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body{
-    background-color: var(--bg);
-    color: var(--text);
-    font-family: Arial, Helvetica, sans-serif;
-    line-height: 1.5;
+body {
+  background-color: #0f1113;
+  color: #e8eaec;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5;
 }
 
-img{
-    max-width: 100%;
-    display: block;
-    height: auto;
+img {
+  max-width: 100%;
+  display: block;
+  height: auto;
 }
 
-/* contenedores reutilizables */
-
-.contenedor, .contenedor-header, .contenedor-hero, .contenedor_footer {
-    width: 90%;
-    max-width: var(--max-width);
-    margin-left: auto;
-    margin-right: auto;
-}
-
+/* LAYOUT */
+/* UTILITIES */
 /* HEADER */
-
-.header-site{
-    background: rgba(22,24,26,0.95);
-    border-bottom: 1px solid rgba(255,255,255,0.03);
+.header-site {
+  background: rgba(22, 24, 26, 0.95);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.03);
 }
 
-.contenedor-header{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1rem 0;
+.contenedor-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
 }
 
-.logo-link{
-    display: inline-block;
-}
-
-.logo{
-    width: 200px;
-    height: auto;
-    display: block;
-}
-
-/* NAVBAR PERSONALIZADA */
+/* UTILITIES */
+/* NAVBAR */
 .navbar {
-    background-color: rgba(22,24,26,0.95); /* asegúrate que el fondo sea oscuro */
-    z-index: 10;
+  background-color: rgba(22, 24, 26, 0.95);
+  z-index: 10;
 }
-.nav-gapatuna {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
 
+.nav-gapatuna {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 }
 
 .nav-gapatuna-toggler {
-    border: none;
+  border: none;
 }
 
 .nav-gapatuna-link,
@@ -89,381 +62,429 @@ img{
 .nav-gapatuna-link:focus,
 .nav-gapatuna-link:active,
 .nav-gapatuna-link:visited {
-    color: #ffffff !important;
+  color: #ffffff !important;
 }
+
 .nav-gapatuna-toggler-icon {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255,0.95)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255,0.95)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }
 
 .nav-gapatuna-link {
-    color: #ffffff !important;
-    font-weight: 600;
-    text-decoration: none;
+  color: #ffffff !important;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .nav-gapatuna-link:hover {
-    color: var(--accent) !important;
+  color: #7aa0c4 !important;
+  transform: translateY(-2px);
 }
 
 .nav-gapatuna-menu {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    align-items: center;
-    gap: 15px;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: center;
+  gap: 15px;
 }
 
+/* LOGO */
+.logo-link {
+  display: inline-block;
+}
 
+.logo {
+  width: 200px;
+  height: auto;
+  display: block;
+}
 
+/* UTILITIES */
 /* HERO */
-
-.hero{
-    height: 60vh;
-    background-image: url(../imagenes/index/hero-background.png);
-    background-size: cover;
-    background-position: 20% 48%;
-    display: flex;
-    align-items: center;
-    padding: 2rem 0;
+.hero {
+  height: 60vh;
+  background-image: url(../imagenes/index/hero-background.png);
+  background-size: cover;
+  background-position: 20% 48%;
+  display: flex;
+  align-items: center;
+  padding: 2rem 0;
+  opacity: 0;
+  animation: herofade 1.5s ease-out forwards;
 }
 
-.contenedor-hero{
-    position: relative;
-    width: 90%;
-    max-width: var(--max-width);
-    margin: 0 auto;
-    display: block;
-    padding: 0;
-    height: 100%;
+@keyframes herofade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.contenedor-hero {
+  position: relative;
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: block;
+  padding: 0;
+  height: 100%;
 }
 
 .texto-hero {
-    position: absolute;
-    right: 20%;
-    top: 87%;
-    transform: translateY(-50%);
-    max-width: 520px;    
-    background: none;
-    color: var(--bg);
+  position: absolute;
+  right: 20%;
+  top: 87%;
+  transform: translateY(-50%);
+  max-width: 520px;
+  background: none;
+  color: #0f1113;
 }
 
-.texto-hero h1{
-    position: relative;
-    left: 138px;
-    top: 1px;       
-    font-family: serif;
-    font-size: 2.8rem;
-    color: rgb(36, 35, 35);
-    margin-bottom: 0.4rem;
+.texto-hero h1 {
+  position: relative;
+  left: 138px;
+  top: 1px;
+  font-family: serif;
+  font-size: 2.8rem;
+  color: rgb(36, 35, 35);
+  margin-bottom: 0.4rem;
 }
 
 .texto-hero p {
-    position: relative;
-    left: 200px;
-    top: -15px;
-    max-width: 500px;
-    font-size: 1.1rem;
+  position: relative;
+  left: 200px;
+  top: -15px;
+  max-width: 500px;
+  font-size: 1.1rem;
 }
 
-.text-primeraletra::first-letter{
-    font-size: 4rem;
-    color: rgb(150, 75, 150);
+.text-primeraletra::first-letter {
+  font-size: 4rem;
+  color: rgb(150, 75, 150);
 }
 
-.lead{
-    color: var(--bg);
-    font-size: 1.05rem;
+.lead {
+  color: #0f1113;
+  font-size: 1.05rem;
 }
 
-/* CARDS DEL INDEX */
-
-.contenedor-cards{
-    padding: 1rem 3rem;
+/* UTILITIES */
+/* UTILITIES */
+/* contenedores reutilizables */
+.contenedor, .contenedor-header, .contenedor-hero, .contenedor_footer {
+  width: 90%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.grid-cards{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: var(--gap-lg);
-    width: 90%;
-    max-width: var(--max-width);
-    margin: 0 auto;
-    padding: 10px;
-}
-
-.card{
-    background: var(--surface);
-    padding: 1rem;
-    border-radius: var(--radius);
-    text-align: left;
-    border: 1px solid rgba(255,255,255,0.02);
-}
-
-.card figure{
-    margin-bottom: 0.75rem;
-}
-
-.card h3{
-    font-family: serif;
-    font-size: 1.1rem;
-    margin-bottom: 0.5rem;
-    color: var(--text);
-}
-
-.card p{
-    color: var(--muted);
-    font-size: 0.95rem;
-    margin-bottom: 0.75rem;
-}
-
-.card a{
-    color: var(--accent);
-    font-weight: 700;
-    text-decoration: none;
-}
-
+/* UTILITIES */
 /* PÁGINAS INTERNAS */
-
-.contenedor{
-    padding: 2.5rem 0;
+.contenedor {
+  padding: 2.5rem 0;
 }
 
-.works{
-    width: 90%;
-    max-width: var(--max-width);
-    margin: 0 auto;
+.works {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.titulo_seccion{
-    font-family: serif;
-    font-size: 2rem;
-    margin-bottom: 0.6rem;
-    color: var(--text);
+.titulo_seccion {
+  font-family: serif;
+  font-size: 2rem;
+  margin-bottom: 0.6rem;
+  color: #e8eaec;
 }
 
-.intro{
-    color: var(--muted);
-    margin-bottom: 1.5rem;
+.intro {
+  color: #9aa0a6;
+  margin-bottom: 1.5rem;
 }
 
-/* GALERÍAS */
-
-.grid_galeria_tattoos, .grid_galeria_obras, .grid_galeria_ceramica {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: var(--gap-md);
-    margin-bottom: 1rem;
-}
-
-.grid_galeria_tattoos figure, .grid_galeria_obras figure, .grid_galeria_ceramica figure {
-    background: rgba(255,255,255,0.02);
-    padding: 0.6rem;
-    border-radius: 8px;
-}
-
-.grid_galeria_tattoos img, .grid_galeria_obras img, .grid_galeria_ceramica img{
-    width: 100%;
-    height: 240px;
-    object-fit: cover;
-    border-radius: 6px;
-}
-
-.grid_galeria_tattoos figcaption, .grid_galeria_obras figcaption, .grid_galeria_ceramica figcaption {
-    color: var(--muted);
-    font-size: 0.9rem;
-}
-
-/* CONTACTO */
-
-.form-contacto{
-    width: 90%;
-    max-width: 700px;
-    margin: 1.5rem auto 3rem auto;
-    display: flex;
-    flex-direction: column;
-    gap: var(--gap-md);
-    padding: 1rem;
-    background: var(--surface);
-    border-radius: 8px;
-    border: 1px solid rgba(255,255,255,0.02);
-}
-
-.form-contacto label{
-    color: var(--muted);
-    font-size: 0.95rem;
-}
-
-.form-contacto input, .form-contacto textarea{
-    padding: 0.7rem;
-    border-radius: 6px;
-    border: 1px solid rgba(255,255,255,0.03);
-    background: rgba(0,0,0,0.15);
-    color: var(--text);
-    font-size: 1rem;
-}
-
-.form-contacto select{
-    padding: 0.7rem;
-    border-radius: 6px;
-    border: 1px solid rgba(255,255,255,0.03);
-    background: #ffffff;
-    color: #000000;
-    font-size: 1rem;
-}
-
-/* BOTÓN PERSONALIZADO */
-.btn-gapatuna{
-    background: var(--accent);
-    color: var(--bg);
-    padding: 0.8rem 1rem;
-    border-radius: 6px;
-    border: none;
-    cursor: pointer;
-    font-weight: 700;
-}
-
+/* UTILITIES */
 /* FOOTER */
-
-.footer{
-    padding: 20px 30px;
-    margin-top: 3rem;
-    padding: 2rem 0;
-    background: rgb(22,24,26,0.95);
-    color: var(--muted);
+.footer {
+  padding: 20px 30px;
+  margin-top: 3rem;
+  padding: 2rem 0;
+  background: rgba(22, 24, 26, 0.95);
+  color: #9aa0a6;
 }
 
-.contenedor_footer{
-    width: 90%;
-    max-width: var(--max-width);
-    margin: 0 auto;
-    text-align: center;
-    font-size: 0.95rem;
-}
-
-/* BOTON WHATSAPP */
-
-.wpp-fixed{
-    position: fixed;
-    bottom: 10px;
-    right: 25px;
-    width: 55px;
-    height: 55px;
-    background-color: none;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.35);
-    z-index: 1000 ;
-    text-decoration: none;
-}
-
-.wpp-fixed img{
-    width: 28px;
-    height: 28px;
+.contenedor_footer {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 0.95rem;
 }
 
 /* LIGHTBOX */
-
 .lightbox {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.8);
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
 }
 
 .lightbox img {
-    max-width: 90%;
-    max-height: 90%;
-    border: 2px solid #fff;
+  max-width: 90%;
+  max-height: 90%;
+  border: 2px solid #fff;
 }
 
 .lightbox:target {
-    display: flex;
+  display: flex;
 }
 
 .lightbox .cerrar {
-    position: absolute;
-    top: 20px;
-    right: 30px;
-    font-size: 2rem;
-    color: white;
-    text-decoration: none;
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 2rem;
+  color: white;
+  text-decoration: none;
+}
+
+/* BOTON WHATSAPP */
+.wpp-fixed {
+  position: fixed;
+  bottom: 10px;
+  right: 25px;
+  width: 55px;
+  height: 55px;
+  background-color: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.35);
+  z-index: 1000;
+  text-decoration: none;
+}
+
+.wpp-fixed img {
+  width: 28px;
+  height: 28px;
+}
+
+/* COMPONENTS */
+/* UTILITIES */
+/* CARDS DEL INDEX */
+.contenedor-cards {
+  padding: 1rem 3rem;
+}
+
+.grid-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.card {
+  background: #16181a;
+  padding: 1rem;
+  border-radius: 10px;
+  text-align: left;
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  transition: transform 0.4s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card figure {
+  margin-bottom: 0.75rem;
+}
+
+.card h3 {
+  font-family: serif;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  color: #e8eaec;
+}
+
+.card p {
+  color: #9aa0a6;
+  font-size: 0.95rem;
+  margin-bottom: 0.75rem;
+}
+
+.card a {
+  color: #7aa0c4;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+/* UTILITIES */
+/* GALERÍAS */
+.grid_galeria_tattoos, .grid_galeria_obras, .grid_galeria_ceramica {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.grid_galeria_tattoos figure, .grid_galeria_obras figure, .grid_galeria_ceramica figure {
+  background: rgba(255, 255, 255, 0.02);
+  padding: 0.6rem;
+  border-radius: 8px;
+}
+
+.grid_galeria_tattoos img, .grid_galeria_obras img, .grid_galeria_ceramica img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.grid_galeria_tattoos figcaption, .grid_galeria_obras figcaption, .grid_galeria_ceramica figcaption {
+  color: #9aa0a6;
+  font-size: 0.9rem;
+}
+
+/* UTILITIES */
+/* BOTÓN PERSONALIZADO */
+.btn-gapatuna {
+  background: #7aa0c4;
+  color: #0f1113;
+  padding: 0.8rem 1rem;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+/* UTILITIES */
+/* CONTACTO */
+.form-contacto {
+  width: 90%;
+  max-width: 700px;
+  margin: 1.5rem auto 3rem auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  padding: 1rem;
+  background: #16181a;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.form-contacto label {
+  color: #9aa0a6;
+  font-size: 0.95rem;
+}
+
+.form-contacto fieldset label {
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.form-contacto fieldset label:hover {
+  color: #7aa0c4;
+}
+
+.form-contacto fieldset input {
+  accent-color: #7aa0c4;
+}
+
+.form-contacto input, .form-contacto textarea {
+  padding: 0.7rem;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  background: rgba(0, 0, 0, 0.15);
+  color: #e8eaec;
+  font-size: 1rem;
+}
+
+.form-contacto select {
+  padding: 0.7rem;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  background: #ffffff;
+  color: #000000;
+  font-size: 1rem;
 }
 
 /* MODAL PERSONALIZADO */
 .modal-consulta .modal-content {
-    background-color: #ffffff;
-    color:#000000;
+  background-color: #ffffff;
+  color: #000000;
 }
 
-.modal-consulta .modal-header{
-    border-bottom: 1px solid #ddd;
+.modal-consulta .modal-header {
+  border-bottom: 1px solid #ddd;
 }
 
 .modal-consulta .modal-footer {
-    border-top: 1px solid #ddd;
+  border-top: 1px solid #ddd;
 }
 
-/* RESPONSIVE */
-@media (max-width: 600px) {
-  .grid-cards,
+/* MEDIA QUERIES */
+@media (max-width: 768px) {
+  /* RESPONSIVE */
+  /* CARDS */
+  .grid-cards {
+    grid-template-columns: 1fr;
+  }
+  /* GALERIA */
   .grid_galeria_tattoos,
   .grid_galeria_obras,
   .grid_galeria_ceramica {
     grid-template-columns: 1fr;
   }
-
+  /* HEADER / NAV */
   .contenedor-header {
     flex-direction: column;
     align-items: flex-start;
     gap: 0.6rem;
     padding: 0.8rem 0;
   }
-
   .main-nav ul {
     flex-direction: column;
     gap: 0.6rem;
     width: 100%;
   }
-
   .logo {
     width: 100px;
   }
-
   /* HERO  */
   .hero {
     height: auto;
     padding-bottom: 0;
   }
-
   .texto-hero {
     position: static !important;
     transform: none !important;
     text-align: center;
-    margin: 1.5rem 0 0 0; 
+    margin: 1.5rem 0 0 0;
     background: none;
   }
-
   .texto-hero h1 {
     position: static !important;
     left: auto !important;
     top: auto !important;
     background: none;
     padding: 0;
-    margin: 0.5rem auto 0 auto; 
-    font-size: 2rem; 
+    margin: 0.5rem auto 0 auto;
+    font-size: 2rem;
     text-align: center;
     text-shadow: 4px 4px 4px white !important;
-    
   }
-
   .texto-hero p {
     position: static !important;
     left: auto !important;
@@ -471,12 +492,14 @@ img{
     background: none;
     padding: 0.2em 0.5em;
     margin: 0.3rem auto 0 auto;
-    font-size: 16px; 
+    font-size: 16px;
     text-align: center;
-    font-weight: bold !important;    
-    color: rgb(36, 35, 35); 
-    display: inline-block; 
+    font-weight: bold !important;
+    color: rgb(36, 35, 35);
+    display: inline-block;
     border-radius: 4px;
     text-shadow: 4px 4px 4px white !important;
   }
 }
+
+/*# sourceMappingURL=styles.css.map */
