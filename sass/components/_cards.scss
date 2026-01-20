@@ -53,4 +53,19 @@
     text-decoration: none;
 }
 
+@keyframes card-fade {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
+@media (max-width: 768px) {
+  .card {
+    animation: card-fade 0.8s ease-out both;
+  }
+}
