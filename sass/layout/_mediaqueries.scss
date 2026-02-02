@@ -38,7 +38,13 @@
     .logo {
     width: 100px;
     }
+    .navbar-toggler {
+    border-color: #fff;
+    }
 
+    navbar-toggler-icon {
+     filter: brightness(2);
+    }
 /* HERO  */
     .hero {
     height: auto;
